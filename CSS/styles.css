@@ -1,0 +1,24 @@
+/* Overall Stuff */
+* {
+font: 200;
+font-size: xx-large;
+}
+/* Setting Margins */
+.HeadingsMargin {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+/* Image/Video Dimensions */
+.ImagesIntro {
+    height: 300px;
+    border-radius: 150px;
+}
+.ImagesGeneral {
+    height: 500px;
+    border-radius: 100px;
+}
+.VideosGeneral {
+    height: 500px;
+    border-radius: 100px;
+}
+
