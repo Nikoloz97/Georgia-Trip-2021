@@ -19,6 +19,7 @@ th {
     border-collapse: collapse;
     padding:5px;
 }
+
 /* Image/Video Dimensions */
 .ImagesIntro {
     height: 300px;
@@ -32,5 +33,4 @@ th {
     height: 500px;
     border-radius: 100px;
 }
-
 
