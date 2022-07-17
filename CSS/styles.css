@@ -17,7 +17,8 @@ td,
 th {
     border: 1px solid black;
     border-collapse: collapse;
-    padding:5px;
+    margin-left: 20px;
+    padding:5px 60px;
 }
 
 /* Image/Video Dimensions */
@@ -34,3 +35,32 @@ th {
     border-radius: 100px;
 }
 
+/* Overflow */
+.overflow {
+    height: 20rem;
+    width: 90%;
+    font-size: 30px;
+    border: 5px solid black;
+    overflow: auto auto;
+}
+
+/* Positioning objects */
+.photoPosition {
+    position: relative;
+    left: 200px;
+    bottom: 20px;
+}
+.YazMon {
+    margin-top: 100px;
+}
+.YazMon-2 {
+    position: relative;
+    left:250px;
+    bottom:700px;
+}
+.YazMon-3 {
+    position: relative;
+    left:500px;
+    bottom:1500px;
+    z-index: -1;
+}
