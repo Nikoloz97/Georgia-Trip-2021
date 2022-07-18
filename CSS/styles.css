@@ -44,28 +44,15 @@ th {
     overflow: auto auto;
 }
 
-/* Positioning objects */
-.photoPosition {
-    position: relative;
-    left: 200px;
-    bottom: 20px;
-}
-.YazMon {
-    margin-top: 100px;
-}
-.YazMon-2 {
-    position: relative;
-    left:250px;
-    bottom:700px;
-}
-.YazMon-3 {
-    position: relative;
-    left:500px;
-    bottom:1500px;
-    z-index: -1;
+/* Using Flex */
+.YazbegiContainer {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-/* Image floating */
+/* Floating Images (outdated) */
 .ImageMalkhaz {
     border: 10px solid black;
     float: left;
@@ -75,19 +62,19 @@ th {
     margin-top: 500px;
 }
 
-/* Using container,divs, and flexbox -> created biography section */
+/* Using container,divs, and flexbox (biography section) */
 .PeopleContainer {
-    border: 1px solid gray;
+    border: none;
     height: auto;
-    width: 50%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 .PersonIcon {
-    height: auto;
-    width: 100px;
+    height: 400px;
+    width: 300px;
     margin: 20px;
     border: 1px solid black;
     border-radius: 50%;   
