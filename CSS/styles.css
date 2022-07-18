@@ -35,23 +35,6 @@ th {
     border-radius: 100px;
 }
 
-/* Overflow */
-.overflow {
-    height: 20rem;
-    width: 90%;
-    font-size: 30px;
-    border: 5px solid black;
-    overflow: auto auto;
-}
-
-/* Using Flex */
-.YazbegiContainer {
-    width: 60vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 /* Floating Images (outdated) */
 .ImageMalkhaz {
     border: 10px solid black;
@@ -62,15 +45,47 @@ th {
     margin-top: 500px;
 }
 
-/* Using container,divs, and flexbox (biography section) */
+/* Overflow */
+.overflow {
+    height: 20rem;
+    width: 90%;
+    font-size: 30px;
+    border: 5px solid black;
+    overflow: auto;
+}
+
+/* Using Flex (Yazbegi photo montage)*/
+.YazbegiContainer {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+/* Flex shrink just wouldn't work... */
+.YazbegiImage {
+    display: flex;
+    flex-basis: 250px;
+    width:500px;
+    height: 500px;
+    flex-shrink: 1;
+    margin: 10px;
+}
+
+/* Creating a biography section using grid */
 .PeopleContainer {
-    border: none;
+    /* border: none;
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-rows: 500px 500px;
+    grid-template-columns: 500px 500px;
 }
 .PersonIcon {
     height: 400px;
