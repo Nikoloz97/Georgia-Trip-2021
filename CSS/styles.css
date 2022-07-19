@@ -74,12 +74,19 @@ th {
 }
 
 /* Creating a biography section using grid */
+/* Tips:
+     ->  Grids: Use units of fractions (fr) over percetntage. If add more rows/columns, doesn't overflow 
+     -> Shorcut: instread of grid template rows/columns, use grid-template: rows / columns 
+     -> Don't assign things to inside the div (e.g. you want the div to move in a grid, and you assign a class to image inside the div directly). 
+     The image in the div can move, but only if you assign to its direct parent div*/
 .PeopleContainer {
     display: grid;
-    grid-template-rows: repeat(2,500px);
-    grid-template-columns: 320px 500px;
+    width: 50%;
+    grid-template-rows: repeat(4,500px);
+    grid-template-columns: 30fr 70fr;
     justify-items: center;
     align-items: center;
+    row-gap: 10px;
 }
 
 .PersonIcon {
@@ -87,11 +94,28 @@ th {
     width: 300px;
     margin: 20px;
     border: 1px solid black;
-    border-radius: 50%;   
+    border-radius: 50%;  
+   
 }
 .IconFit {
     height: 100%;
     width: 100%;
     border-radius: 50%;
+
 }
 
+/* Shifting Items in a grid */
+/* In devtools, click the grid button to see how the boxes are named */
+.NiniIcon {
+    grid-row: 4;
+    border: red;
+}
+.MalkhazIcon {
+    grid-row:1;
+}
+.NiniDesc {
+    grid-row: -2;
+}
+.MalkhazDesc {
+    grid-row: -5;
+}
