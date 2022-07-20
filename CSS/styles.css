@@ -98,18 +98,34 @@ th {
 Grids: Use units of fractions (fr) over percetntage. If add more rows/columns, doesn't overflow 
 Tip: instead of grid template rows/columns properties, can use grid-template: rows / columns 
 Tip: Don't assign things relative to container for children inside div (e.g. image element)
+Tip: To see assigned names for grid, in devtools, after selecting "grid", under layout section, select "show area names" 
 */
 
 .PeopleContainer {
     display: grid;
     width: 50%;
-    grid-template-rows: repeat(4,500px);
+    grid-template-rows: 100px, repeat(4,500px);
     grid-template-columns: 30fr 70fr;
-    justify-items: center;
+    justify-items: left;
     align-items: center;
     row-gap: 10px;
-    grid-template-areas: "Image1 Desc1" "Image2 Desc2" "Image3 Desc3" "Image4 Desc4";
+    grid-template-areas: "HeaderIcon HeaderDesc" "Image1 Desc1" "Image2 Desc2" "Image3 Desc3" "Image4 Desc4";
 
+}
+.PeopleHeaderIcon {
+    grid-area: HeaderIcon;
+    width: auto;
+    /* Below = making a div element hidden (visibility = doesn't take spot. Display = does)*/
+    /* visibility: hidden; */
+    /* display: none */
+}
+
+.PeopleHeaderDesc {
+    grid-area: HeaderDesc;
+    width: auto;
+    /* Below = making a div element hidden (visibility = doesn't take spot. Display = does)*/
+    /* visibility: hidden; */
+    /* display: none */
 }
 .PersonIcon {
     height: 400px;
@@ -125,7 +141,8 @@ Tip: Don't assign things relative to container for children inside div (e.g. ima
     border-radius: 50%;
 
 }
-/* Shifting Items in a grid */
+
+/* Shifting Items in a grid (refer to grid-template-areas property) */
 .NiniIcon {
     grid-area: Image1;
 }
@@ -139,3 +156,9 @@ Tip: Don't assign things relative to container for children inside div (e.g. ima
     grid-area: Desc4;
 }
 
+/* Using Media Query (to the people section) */
+@media screen and (max-width: 1500px) {
+    .PeopleContainer {
+        width: 100%;
+    }
+}
