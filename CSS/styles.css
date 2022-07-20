@@ -96,10 +96,10 @@ th {
 /* ------ */
 /* 
 Grids: Use units of fractions (fr) over percetntage. If add more rows/columns, doesn't overflow 
-Tip: instread of grid template rows/columns, use grid-template: rows / columns 
-Tip: Don't assign things to inside the div (e.g. you want the div to move in a grid, and you assign a class to image inside the div directly). 
-Tip: The image in the div can move, but only if you assign to its direct parent div
-Tip: To name grid names, use property: grid-template-areas. Each quote = row, Each word in quote = columns of that row*/
+Tip: instead of grid template rows/columns properties, can use grid-template: rows / columns 
+Tip: Don't assign things relative to container for children inside div (e.g. image element)
+*/
+
 .PeopleContainer {
     display: grid;
     width: 50%;
@@ -108,6 +108,7 @@ Tip: To name grid names, use property: grid-template-areas. Each quote = row, Ea
     justify-items: center;
     align-items: center;
     row-gap: 10px;
+    grid-template-areas: "Image1 Desc1" "Image2 Desc2" "Image3 Desc3" "Image4 Desc4";
 
 }
 .PersonIcon {
@@ -125,17 +126,16 @@ Tip: To name grid names, use property: grid-template-areas. Each quote = row, Ea
 
 }
 /* Shifting Items in a grid */
-/* In devtools, click the grid button to see how the boxes are named */
 .NiniIcon {
-    grid-row: 4;
-    border: red;
-}
-.MalkhazIcon {
-    grid-row:1;
+    grid-area: Image1;
 }
 .NiniDesc {
-    grid-row: -2;
+    grid-area: Desc1;
+}
+.MalkhazIcon {
+    grid-area: Image4;
 }
 .MalkhazDesc {
-    grid-row: -5;
+    grid-area: Desc4;
 }
+
