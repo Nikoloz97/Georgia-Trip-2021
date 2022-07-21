@@ -7,6 +7,14 @@ font: 200;
 font-size: xx-large;
 }
 
+/* Headings */
+
+h1, h2, h3, h4 {
+    text-decoration: underline;
+    padding-top: 100px;
+}
+
+
 /* ----- */
 /* Setting Margins */
 /* ----- */
@@ -74,22 +82,19 @@ th {
 /* Using Flex (Yazbegi photo montage)*/
 /* ----- */
 .YazbegiContainer {
-    width: 500px;
+    width: 2000px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
 /* ----- */
-/* Flex shrink just wouldn't work... */
+/* Flex shrink wouldn't work... Flex basis = overtakes width/height properties */
 /* ----- */
 .YazbegiImage {
-    display: flex;
-    flex-basis: 250px;
-    width:500px;
-    height: 500px;
+    flex-basis: 500px;
     flex-shrink: 1;
-    margin: 10px;
+    margin-bottom: 100px;
 }
 /* ------ */
 /* Creating a biography section using grid */
@@ -106,7 +111,6 @@ Tip: To see assigned names for grid, in devtools, after selecting "grid", under 
     width: 50%;
     grid-template-rows: 100px, repeat(4,500px);
     grid-template-columns: 30fr 70fr;
-    justify-items: left;
     align-items: center;
     row-gap: 10px;
     grid-template-areas: "HeaderIcon HeaderDesc" "Image1 Desc1" "Image2 Desc2" "Image3 Desc3" "Image4 Desc4";
@@ -156,9 +160,35 @@ Tip: To see assigned names for grid, in devtools, after selecting "grid", under 
     grid-area: Desc4;
 }
 
-/* Using Media Query (to the people section) */
+/* Creating Forms */
+form, textarea {
+    width: 50%;
+    padding: 2rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.QForms {
+    margin-top: 50px;
+}
+
+
+/* Using Media Query (For Split Screening)*/
 @media screen and (max-width: 1500px) {
     .PeopleContainer {
         width: 100%;
     }
+    .YazbegiContainer {
+        width: 1000px
+        }
+    .YazbegiImage {
+        flex-basis: 300px;
+        }
+    form, textarea {
+        width: 100%;
+    }
 }
+
+
