@@ -107,7 +107,9 @@
                   src="/Images/TutoringLogo.png"
                   alt="My tutoring logo"
                 />
-                <figcaption>My tutoring services</figcaption>
+                <div class="TutorCaption_width">
+                  <figcaption >My tutoring services</figcaption>
+                </div>
               </figure></a
             >
           </p>
@@ -157,12 +159,33 @@
           <!-- ----- -->
           <!-- Flexing Photos -->
           <!-- ----- -->
-          <h3 class="HeadingsMargin">Photo Montage</h3>
+          <h3 class="HeadingsMargin">Yazbegi - Photo Montage</h3>
           <div class="YazbegiContainer">
-            <div class="YazbegiImage"><img class = "ImagesGeneral" src="/Images/IMG_2428.jpg" alt=""></div>
-            <div class="YazbegiImage"><img class = "ImagesGeneral" src="/Images/IMG_2431.jpg" alt=""></div>
-            <div class="YazbegiImage"><img class = "ImagesGeneral" src="/Images/IMG_2407.jpg" alt=""></div>
+            <figure>
+              <div class="YazbegiImage"><img class = "ImagesGeneral" src="/Images/IMG_2428.jpg" alt=""></div>
+              <figcaption class = "Yaz_figcap">Yazbegi church (from along a trail)</figcaption>
+            </figure>
+            <figure>
+              <div class="YazbegiImage"><img class = "ImagesGeneral" src="/Images/IMG_2431.jpg" alt=""></div>
+              <figcaption class = "Yaz_figcap">Yazbegi church (from a corner)</figcaption>
+            </figure>
+            <figure>
+              <div class="YazbegiImage"><img class = "ImagesGeneral" src="/Images/IMG_2407.jpg" alt=""></div>
+              <figcaption class = "Yaz_figcap">Me in the front of the trail overlooking the town</figcaption>
+            </figure>
           </div>
+
+          <!-- Creating a drop-down list menu-->
+
+          <p>Which one was your favorite photo?</p>
+            <form class="Dropdown_form_height">
+              <select class="DropDown_select_height">
+                <option value="">Select an image</option>
+                <option value="1">Yazbegi Church - along trail</option>
+                <option value="2">Yazbegi Church - from a corner</option>
+                <option value="3">In front of trail</option>
+              </select>
+            </form>
 
           <!-- ----- -->
           <!-- Creating a grid -->
@@ -200,14 +223,30 @@
               <p>Me, Nini, and Malkhaz (front) at a church in Javakheti.</p>
             </div>
           </div>
+
           <h2>Review</h2>
-          <div class="QForms">
+
+          <!-- Creating more types of forms -->
+          <div class="Review_Forms_margins">
             <p>What was your favorite part?</p>
-            <form action="">
-              <textarea cols="30" rows="10"></textarea>
+            <form >
+              <textarea cols="30" rows="10" placeholder ="My favorite part was..."></textarea>
             </form>
           </div>
-          
+          <div class="Review_Forms_margins">
+            <p>Where should I travel next? (suggestions = my top 4 countries next time)</p>
+            <form>
+              <input type="text" list="countries">
+                <datalist id="countries">
+                  <option>Russia</option>
+                  <option>France</option>
+                  <option>Italy</option>
+                  <option>Germany</option>
+                </datalist>
+              </input>
+            </form>
+          </div>
+          <!-- ? -->
     </main>
     <footer>
       <div><a href="#">Jump back to top</a></div>

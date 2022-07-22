@@ -43,6 +43,13 @@ th {
     padding:5px 60px;
 }
 
+
+/* Tutoring image - figcaption width */
+
+.TutorCaption_width {
+    width: 300px;
+    text-align: center;
+}
 /* ----- */
 /* Image/Video Dimensions */
 /* ----- */
@@ -84,28 +91,45 @@ th {
 }
 
 /* ------ */
-/* Using Flex (Yazbegi photo montage)*/
+/* Yazbegi photo montage)*/
 /* ----- */
+
+/* Using Flex */
+
 .YazbegiContainer {
     width: 2000px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 100px;
 
 }
+
+/* Fixing Yazbegi Form */
+.Dropdown_form_height {
+    height: 200px;
+}
+.DropDown_select_height {
+    height: 50px;
+}
+
+
 /* ----- */
 /* Flex shrink wouldn't work... Flex basis = overtakes width/height properties */
 /* ----- */
 .YazbegiImage {
     flex-basis: 500px;
     flex-shrink: 1;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
+}
+.Yaz_figcap {
+    text-align: center;
 }
 /* ------ */
 /* Creating a biography section using grid */
 /* ------ */
 /* 
-Grids: Use units of fractions (fr) over percetntage. If add more rows/columns, doesn't overflow 
+Grids: Use units of fractions (fr) over percentage. If add more rows/columns, doesn't overflow 
 Tip: instead of grid template rows/columns properties, can use grid-template: rows / columns 
 Tip: Don't assign things relative to container for children inside div (e.g. image element)
 Tip: To see assigned names for grid, in devtools, after selecting "grid", under layout section, select "show area names" 
@@ -171,25 +195,31 @@ form, textarea {
     padding: 2rem;
 }
 
+input {
+    padding: 5px;
+}
+
 textarea {
     resize: none;
 }
 
-.QForms {
+.Review_Forms_margins {
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 
-/* Using Media Query (For Split Screening)*/
+
+/* Using Media Query (Display when split-screening)*/
 @media screen and (max-width: 1500px) {
     .PeopleContainer {
         width: 100%;
     }
     .YazbegiContainer {
-        width: 1000px
+        width: 1200px
         }
     .YazbegiImage {
-        flex-basis: 300px;
+        flex-basis: 400px;
         }
     form, textarea {
         width: 100%;
