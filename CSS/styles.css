@@ -7,6 +7,11 @@ font: 200;
 font-size: xx-large;
 }
 
+p, h1, h2, h3, h4, ul, li {
+    padding-left: 20px;
+}
+
+
 /* Headings */
 
 h1, h2, h3, h4 {
