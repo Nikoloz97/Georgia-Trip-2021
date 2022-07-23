@@ -97,9 +97,7 @@
             On the side, I currently tutor in science topics (Biochemistry,
             Physiology, Genetics, etc. ) and starting up my youtube channel based on
             that. Here is the link below if you're interested:
-            <!-- ----- -->
             <!-- Links: a + tab -->
-            <!-- ----- -->
             <a href="https://www.nikoscience.com/" target="_blank"
               ><figure>
                 <img
@@ -137,9 +135,8 @@
         </section>
         <!--  -->
         <h2 id="JumpToStart" class="HeadingsMargin">Flight to Georgia</h2>
-        <!-- ----- -->
+
         <!-- Overflow  -->
-        <!-- ----- -->
         <div class="overflow">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod dolorum eos, eaque praesentium aperiam iure quae quo eligendi quidem, soluta voluptatem tenetur veritatis officiis, fugiat rem dolorem quas reprehenderit? Minima distinctio nesciunt hic iste voluptatem sint, repellat explicabo ratione tenetur doloribus. Ea magni commodi fugit esse unde maxime nesciunt corporis! Quidem dolore tenetur explicabo tempore, consectetur dolores labore vitae doloremque obcaecati repudiandae iure magnam saepe sit sapiente inventore consequuntur ullam, eos libero quo. Beatae pariatur mollitia et harum? Quasi voluptate quia eius quam eum mollitia veritatis! Odit, numquam deserunt nihil eaque libero ex excepturi doloribus molestias, molestiae culpa deleniti eligendi minus earum nisi, veritatis eveniet. Nisi molestias, dolorum, voluptatem rerum sunt incidunt debitis sed sequi quisquam nemo aliquam doloribus eos vel maxime odit hic corrupti, esse et fugit natus! Aut, qui. Id debitis odio eius ad! Rerum, deleniti suscipit illo, temporibus ratione est iure soluta natus sapiente, necessitatibus quisquam quaerat! Dolor nesciunt in neque amet recusandae iure doloribus, numquam officiis fugit maiores distinctio pariatur similique eius tempora nostrum adipisci. Cumque aliquam officiis sapiente corrupti fuga quisquam quia commodi facere, vero molestiae, aut temporibus id numquam iusto incidunt consequuntur earum voluptatibus corporis veritatis aperiam voluptates possimus tempore reiciendis? Quis id amet provident, aliquid et explicabo laudantium eaque at. Tempore maxime quaerat rerum exercitationem accusantium libero, incidunt laudantium eligendi iste repellat architecto modi! Nesciunt dolorum quo nobis eum adipisci numquam dolores, tempore deserunt est aliquid facilis amet ipsum ipsa dolore nam non iusto magni perferendis quidem illo ullam. Consectetur eum repellendus veritatis qui laudantium beatae, saepe eius culpa id exercitationem, possimus libero error dolore nam perferendis ipsam recusandae quia expedita tempora animi non labore doloribus. Id rem quos maiores quod, nulla eveniet obcaecati veniam repellat consequatur deserunt neque animi a qui, magnam atque. Architecto possimus provident, beatae totam omnis fugit? Voluptates eveniet cumque officia aperiam, eaque sunt fugit error placeat vero qui, aliquid voluptatum, minima illo ratione quas dicta dolores. Nam, architecto consequuntur ea enim ipsum et quasi magni quam. Sit illo, dolores quaerat veritatis facere, quas obcaecati beatae libero voluptates ut atque in ipsa recusandae totam laborum error officiis accusamus, dolorum deserunt! Ullam natus sequi sed amet, repudiandae, laborum earum sit minima asperiores aspernatur error voluptate quasi! Non impedit eos laudantium? Deleniti iusto ea nulla corporis earum nisi impedit! Vel quos veniam ipsam amet repudiandae nesciunt explicabo omnis aut eveniet autem nisi, expedita incidunt maiores iste aperiam architecto labore. Aspernatur possimus, odio facilis, beatae blanditiis obcaecati facere saepe numquam sequi similique quibusdam nesciunt reprehenderit ea dicta esse? Reiciendis neque sit eum vero eius sint, officiis tempore voluptatibus voluptas eos aperiam perspiciatis architecto dolore. Id dolore quae amet accusamus quisquam minus culpa voluptas voluptatem exercitationem in obcaecati laborum, necessitatibus itaque labore temporibus voluptate magnam explicabo earum consectetur. Enim ut ratione voluptas quam eveniet nemo neque itaque consectetur voluptatum recusandae aliquid, impedit atque iure illum perspiciatis. Rerum ab natus vitae consequatur aperiam architecto veniam animi distinctio reprehenderit voluptas provident numquam cupiditate consequuntur eum deleniti eligendi blanditiis itaque nostrum quod, unde magni mollitia. Eveniet.</div>
         </div>
         <!--  -->
@@ -149,16 +146,36 @@
           Khazbegi is a mountain town in the north of the Mtskheta-Mtianeti region
           of Georgia
         </p>
-        <!-- ----- -->
+
         <!-- Creating a video: video + tab. Make sure to add "controls" attribute -->
-        <!-- ----- -->
           <video controls loop muted class="VideosGeneral" src="/Videos/Khazbegi.MOV">
             Video of mountains leading up to Khazbegi
           </video>
+
+          <!-- Creating a checkbox: each option = wrapped in div and composed of input-label. Uses "id" -> "for" attributes... -->
+          <!-- ... label-inline class = specific for milligram (won't see it in CSS) -->
+          <p class="form_title_top-margin">Which aspects in the video were eye-catching to you?</p>
+          <div class="Form_margin-left">
+            <input type="checkbox" id="Mountains">
+            <label class="label-inline CheckBox_font_size" for="Mountains">The mountains</label>
+          </input>
+          </div>
+          <div class="Form_margin-left">
+            <input type="checkbox" id="Mountains">
+            <label class="label-inline CheckBox_font_size" for="Mountains">Paragliders</label>
+          </input>
+          </div>
+          <div class="Form_margin-left">
+            <input type="checkbox" id="Mountains">
+            <label class="label-inline CheckBox_font_size" for="Mountains">The sky</label>
+          </input>
+          </div>
+
+          <!-- ... radio button = very similar to checkbox setup. Only differences: 1. input type: radio, 2. Give input a "name" attribute - label this whatever -->
+          <!--  -->
+
         
-          <!-- ----- -->
           <!-- Flexing Photos -->
-          <!-- ----- -->
           <h3 class="HeadingsMargin">Yazbegi - Photo Montage</h3>
           <div class="YazbegiContainer">
             <figure>
@@ -175,21 +192,32 @@
             </figure>
           </div>
 
-          <!-- Creating a drop-down list menu-->
+          <!-- Creating a drop-down list... -->
 
-          <p>Which one was your favorite photo?</p>
+          <p class="form_title_top-margin">Which one was your favorite photo?</p>
             <form class="Dropdown_form_height">
               <select class="DropDown_select_height">
                 <option value="">Select an image</option>
-                <option value="1">Yazbegi Church - along trail</option>
-                <option value="2">Yazbegi Church - from a corner</option>
-                <option value="3">In front of trail</option>
+                <option value="Church-Trail">Yazbegi Church - along trail</option>
+                <option value="Church-Corner">Yazbegi Church - from a corner</option>
+                <option value="Overlooking-Town">Overlooking town</option>
+              </select>
+            </form>
+
+            <!-- ... creating a multiple-selecting drop-down list -->
+            <p class = "form_title_top-margin"> Which of these photos should go in my montage? (Can select multiple)</p>
+            <form class="Dropdown_form_height">
+              <select multiple class="DropDown_select_height">
+                <option value="Church-Trail">Yazbegi Church - along trail</option>
+                <option value="Church-Corner">Yazbegi Church - from a corner</option>
+                <option value="Overlooking-Town">Overlooking town</option>
               </select>
             </form>
 
           <!-- ----- -->
+
+
           <!-- Creating a grid -->
-          <!-- ----- -->
           <h2 class="PeopleMargin">People</h2>
           <div class="PeopleContainer">
             <div class="PeopleHeaderIcon">
@@ -223,18 +251,21 @@
               <p>Me, Nini, and Malkhaz (front) at a church in Javakheti.</p>
             </div>
           </div>
+        <!--  -->
 
           <h2>Review</h2>
 
-          <!-- Creating more types of forms -->
+          <!-- Creating more types of forms.... -->
+          <!-- ... text area -->
           <div class="Review_Forms_margins">
-            <p>What was your favorite part?</p>
+            <p class="form_title_top-margin">What was your favorite part?</p>
             <form >
               <textarea cols="30" rows="10" placeholder ="My favorite part was..."></textarea>
             </form>
           </div>
+          <!-- ... data list  -->
           <div class="Review_Forms_margins">
-            <p>Where should I travel next? (suggestions = my top 4 countries next time)</p>
+            <p class="form_title_top-margin">Where should I travel next?</p>
             <form>
               <input type="text" list="countries">
                 <datalist id="countries">
@@ -246,7 +277,19 @@
               </input>
             </form>
           </div>
-          <!-- ? -->
+          <!--  -->
+
+          <!-- Creating a file input -->
+          <p class="form_title_top-margin">Visited Georgia and want to share your images? Drop them down below!</p>
+          <form >
+            <input multiple type="file" accept="video/*">
+          </form>
+
+          <p class="form_title_top-margin">Better yet, drop videos here!</p>
+          <form>
+            <input type="file" accept="image/*">
+          </form>
+
     </main>
     <footer>
       <div><a href="#">Jump back to top</a></div>
