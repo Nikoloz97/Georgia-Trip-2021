@@ -3,8 +3,7 @@
 /* Overall Stuff */
 /* ----- */
 * {
-font: 200;
-font-size: xx-large;
+font-size: 3rem;
 }
 
 p, h1, h2, h3, h4, ul, li {
@@ -109,13 +108,6 @@ figcaption {
 
 }
 
-/* Fixing Yazbegi Form */
-.Dropdown_form_height {
-    height: 200px;
-}
-.DropDown_select_height {
-    height: 50px;
-}
 
 
 /* ----- */
@@ -197,6 +189,12 @@ Tip: To see assigned names for grid, in devtools, after selecting "grid", under 
 form, textarea {
     width: 50%;
     padding: 2rem;
+    font-size: 2rem;
+
+}
+
+.label_size {
+    font-size: 2.5rem;
 }
 
 input {
@@ -214,6 +212,10 @@ textarea {
 p.form_title_top-margin {
     margin-top: 100px;
 }
+.margin_button {
+    margin-top: 50px;
+}
+
 
 
 /* .. Checkbox form */
@@ -223,6 +225,19 @@ p.form_title_top-margin {
 
 .CheckBox_font_size {
     font-size: 3rem;
+}
+
+/* Fixing Yazbegi Form */
+.Dropdown_form_height {
+    height: auto;
+}
+.DropDown_select_height {
+    height: 50px;
+}
+
+/* Fieldsets */
+.legend_margin {
+    margin-top: 100px;
 }
 
 /* .... */

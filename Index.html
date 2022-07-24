@@ -114,10 +114,12 @@
           <h3>Contact</h3>
           <p>You can contact me directly through my email <a href="mailto:nick.gotsy@gmail.com" target="_blank">here</a></p>
           <p>Better yet, subscribe to our mailing list down below!</p>
+          
 
-          <!-- Inputing a form -->
+          <!-- Creaating a form -->
           <form>
             <input type="email" placeholder="Put email here..." maxlength="100">
+            <input class="button-primary margin_button" type="submit" value="Send">
           </form>
           <!--  -->
 
@@ -155,21 +157,25 @@
           <!-- Creating a checkbox: each option = wrapped in div and composed of input-label. Uses "id" -> "for" attributes... -->
           <!-- ... label-inline class = specific for milligram (won't see it in CSS) -->
           <p class="form_title_top-margin">Which aspects in the video were eye-catching to you?</p>
-          <div class="Form_margin-left">
-            <input type="checkbox" id="Mountains">
-            <label class="label-inline CheckBox_font_size" for="Mountains">The mountains</label>
-          </input>
-          </div>
-          <div class="Form_margin-left">
-            <input type="checkbox" id="Mountains">
-            <label class="label-inline CheckBox_font_size" for="Mountains">Paragliders</label>
-          </input>
-          </div>
-          <div class="Form_margin-left">
-            <input type="checkbox" id="Mountains">
-            <label class="label-inline CheckBox_font_size" for="Mountains">The sky</label>
-          </input>
-          </div>
+          <form>
+            <div class="Form_margin-left">
+              <input type="checkbox" id="Mountains">
+              <label class="label-inline CheckBox_font_size" for="Mountains">The mountains</label>
+            </input>
+            </div>
+            <div class="Form_margin-left">
+              <input type="checkbox" id="Mountains">
+              <label class="label-inline CheckBox_font_size" for="Mountains">Paragliders</label>
+            </input>
+            </div>
+            <div class="Form_margin-left">
+              <input type="checkbox" id="Mountains">
+              <label class="label-inline CheckBox_font_size" for="Mountains">The sky</label>
+            </input>
+            </div>
+            <input class="button-primary margin_button" type="submit" value="Send">
+
+          </form>
 
           <!-- ... radio button = very similar to checkbox setup. Only differences: 1. input type: radio, 2. Give input a "name" attribute - label this whatever -->
           <!--  -->
@@ -202,6 +208,7 @@
                 <option value="Church-Corner">Yazbegi Church - from a corner</option>
                 <option value="Overlooking-Town">Overlooking town</option>
               </select>
+              <input class="button-primary" type="submit" value="Send">
             </form>
 
             <!-- ... creating a multiple-selecting drop-down list -->
@@ -212,6 +219,7 @@
                 <option value="Church-Corner">Yazbegi Church - from a corner</option>
                 <option value="Overlooking-Town">Overlooking town</option>
               </select>
+              <input class="button-primary" type="submit" value="Send">
             </form>
 
           <!-- ----- -->
@@ -267,7 +275,7 @@
           <div class="Review_Forms_margins">
             <p class="form_title_top-margin">Where should I travel next?</p>
             <form>
-              <input type="text" list="countries">
+              <input type="text" list="countries" max="100">
                 <datalist id="countries">
                   <option>Russia</option>
                   <option>France</option>
@@ -281,14 +289,48 @@
 
           <!-- Creating a file input -->
           <p class="form_title_top-margin">Visited Georgia and want to share your images? Drop them down below!</p>
-          <form >
-            <input multiple type="file" accept="video/*">
+          <form>
+            <input multiple type="file" accept="video/*" max="5">
+            <div><input class="button-primary margin_button" type="submit" value="Send"></div>
           </form>
 
           <p class="form_title_top-margin">Better yet, drop videos here!</p>
           <form>
-            <input type="file" accept="image/*">
+            <input type="file" accept="image/*" max="5">
+            <div><input class="button-primary margin_button" type="submit" value="Send"></div>
           </form>
+          <!--  -->
+
+          <!-- Creating a fieldset -->
+          <h2>Buy My Merchandise</h2>
+    
+            <form>
+              <fieldset>
+                <legend class="label_size legend_margin"><i>Billing/Payment Information</i></legend>
+                <label class="label_size" for="nameField">Full Name</label>
+                <input required maxlength ="50" type="text" placeholder="First-name Last-name (full)" id="nameField">
+                <label class="label_size" for="Address">Address</label>
+                <input required maxlength ="50" type="text" placeholder = "Address (line 1)" id="Address">
+                <input type="text" maxlength ="50" placeholder="Address (line 2)" id="Address">
+                <input type="text" maxlength ="50" placeholder="Address (line 3)" id="Address">
+
+                <legend class="label_size legend_margin"><i>Optional Information</i></legend>
+                <label class="label_size" for="Additional-Info">Comment</label>
+                <textarea placeholder="Additional Info..." id="Additional-Info"></textarea>
+                <label class="label_size">Age Range </label>
+                <select class = "DropDown_select_height" id="ageRangeField">
+                  <option class ="agerange_height" value="0-13">0-13</option>
+                  <option value="14-17">14-17</option>
+                  <option value="18-23">18-23</option>
+                  <option value="24+">24+</option>
+                </select>
+                <div class="float-right">
+                  <input type="checkbox" id="confirmField">
+                  <label class="label-inline" for="confirmField">Send a copy to yourself</label>
+                </div>
+                <input class="button-primary" type="submit" value="Send">
+              </fieldset>
+            </form>
 
     </main>
     <footer>
