@@ -1,13 +1,19 @@
 
-/* ----- */
 /* Overall Stuff */
-/* ----- */
 * {
 font-size: 3rem;
 }
 
 p, h1, h2, h3, h4, ul, li {
     padding-left: 20px;
+}
+
+/* Establishing Root colors */
+
+:root {
+    --color-primary: rgb(0,128,128);
+    --color-secondary: rgb(0,255,255);
+    --color-accent: #2c2ced;
 }
 
 
@@ -19,9 +25,7 @@ h1, h2, h3, h4 {
 }
 
 
-/* ----- */
 /* Setting Margins */
-/* ----- */
 .HeadingsMargin {
     margin-top: 100px;
     margin-bottom: 20px;
@@ -30,9 +34,7 @@ h1, h2, h3, h4 {
     margin-top: 100px;
 }
 
-/* ----- */
 /* Tables */
-/* ----- */
 table,
 td,
 th {
@@ -47,15 +49,14 @@ figcaption {
 }
 
 
-/* Tutoring image - figcaption width */
+/* Tutoring image */
 
 .TutorCaption_width {
     width: 300px;
     text-align: center;
 }
-/* ----- */
+
 /* Image/Video Dimensions */
-/* ----- */
 
 .ImagesIntro {
     height: 300px;
@@ -70,9 +71,7 @@ figcaption {
     border-radius: 100px;
 }
 
-/* ----- */
 /* Floating Images (outdated) */
-/* ----- */
 
 .ImageMalkhaz {
     border: 10px solid black;
@@ -82,9 +81,8 @@ figcaption {
     clear: both;
     margin-top: 500px;
 }
-/* ----- */
 /* Overflow */
-/* ----- */
+
 .overflow {
     height: 20rem;
     width: 90%;
@@ -93,11 +91,10 @@ figcaption {
     overflow: auto;
 }
 
-/* ------ */
-/* Yazbegi photo montage)*/
-/* ----- */
 
-/* Using Flex */
+/* Yazbegi photo montage)*/
+
+/* ... using Flex */
 
 .YazbegiContainer {
     width: 2000px;
@@ -107,7 +104,6 @@ figcaption {
     margin-bottom: 100px;
 
 }
-
 
 
 /* ----- */
@@ -121,14 +117,14 @@ figcaption {
 .Yaz_figcap {
     text-align: center;
 }
-/* ------ */
-/* Creating a biography section using grid */
-/* ------ */
+
+/* Creating a biography section using a grid */
+
 /* 
 Grids: Use units of fractions (fr) over percentage. If add more rows/columns, doesn't overflow 
-Tip: instead of grid template rows/columns properties, can use grid-template: rows / columns 
-Tip: Don't assign things relative to container for children inside div (e.g. image element)
-Tip: To see assigned names for grid, in devtools, after selecting "grid", under layout section, select "show area names" 
+Tip2: instead of grid template rows/columns properties, can use grid-template: rows / columns 
+Tip3: Don't assign things relative to container for children inside div (e.g. image element). Assign to the div! 
+Tip4: To see assigned names for grid, in devtools, after selecting "grid", under layout section, select "show area names" 
 */
 
 .PeopleContainer {
