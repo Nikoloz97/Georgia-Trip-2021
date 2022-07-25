@@ -1,16 +1,21 @@
+<!-- Boilerplate: shift + !  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- adding description to code: Used for strengthening SEO results -->
     <meta name="Overall" content="Travel Blog, Eastern Europe, Sights" />
     <!--  -->
+
+    <!--  Linking stylesheet and Normalize.CSS  -->
     <link rel="stylesheet" href="/CSS/styles.css" />
     <link rel="stylesheet" href="/CSS/normalize.css" />
-    <!-- Added Milligram -->
-    <!-- Google Fonts -->
+    <!--  -->
+    <!-- Adding Milligram -->
+    <!-- ...Google Fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
 <!-- CSS Reset -->
@@ -32,9 +37,7 @@
         September of 2021. Here's a little snippet of what's to come:
       </p>
 
-      <!-- ----- -->
       <!-- Creating an image: img + tab  -->
-      <!-- ----- -->
       <figure>
         <img
           class="ImagesGeneral ImageMalkhaz"
@@ -44,7 +47,9 @@
           <figcaption class="MalkhazImageCaption">
             Malkhaz, Nini, and I somewhere in Javakheti. It around 72&deg outside
           </figcaption>
+        <!--  -->
       </header>
+
     <main>
       
         <div>
@@ -116,9 +121,9 @@
           <p>Better yet, subscribe to our mailing list down below!</p>
           
 
-          <!-- Creaating a form -->
-          <form>
-            <input type="email" placeholder="Put email here..." maxlength="100">
+          <!-- Creating a contact form. For Formspree, 1 - form: method POST, 2 - input: name attribute -->
+          <form action="https://formspree.io/f/xnqwewvn" method="POST">
+            <input type="email" placeholder="Put email here..." maxlength="100" name="Email">
             <input class="button-primary margin_button" type="submit" value="Send">
           </form>
           <!--  -->
@@ -198,7 +203,7 @@
             </figure>
           </div>
 
-          <!-- Creating a drop-down list... -->
+          <!-- Creating a drop-down list: form -> select -> option... -->
 
           <p class="form_title_top-margin">Which one was your favorite photo?</p>
             <form class="Dropdown_form_height">
@@ -301,7 +306,7 @@
           </form>
           <!--  -->
 
-          <!-- Creating a fieldset -->
+          <!-- Creating a fieldset (groupingrelated fields). "Fieldset" can be renamed as "section" (same effect) -->
           <h2>Buy My Merchandise</h2>
     
             <form>
