@@ -16,6 +16,8 @@ p, h1, h2, h3, h4, ul, li {
     --color-accent: #2c2ced;
 }
 
+/*  */
+
 
 /* Headings */
 
@@ -81,15 +83,33 @@ figcaption {
     clear: both;
     margin-top: 500px;
 }
-/* Overflow */
+
+/* Overflow (found the webkit stuff online) */
 
 .overflow {
-    height: 20rem;
+    height: 30rem;
     width: 90%;
     font-size: 30px;
-    border: 5px solid black;
+    border: 2px solid gray;
+    border-radius: 20px;
     overflow: auto;
+    margin-left: 20px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    border: 1px solid beige;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: whitesmoke;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: lightgray;
+  }
 
 
 /* Yazbegi photo montage)*/
@@ -140,6 +160,10 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
 .PeopleHeaderIcon {
     grid-area: HeaderIcon;
     width: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+    text-decoration: underline;
     /* Below = making a div element hidden (visibility = doesn't take spot. Display = does)*/
     /* visibility: hidden; */
     /* display: none */
@@ -148,6 +172,10 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
 .PeopleHeaderDesc {
     grid-area: HeaderDesc;
     width: auto;
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: center;
+    text-decoration: underline;
     /* Below = making a div element hidden (visibility = doesn't take spot. Display = does)*/
     /* visibility: hidden; */
     /* display: none */
@@ -239,7 +267,7 @@ p.form_title_top-margin {
 /* .... */
 
 
-/* Using Media Query (Display when split-screening)*/
+/* Using Media Query (Display when split-screening). Standard breakpoint = 1024px (since laptops/desktops = greater than that)*/
 @media screen and (max-width: 1500px) {
     .PeopleContainer {
         width: 100%;
