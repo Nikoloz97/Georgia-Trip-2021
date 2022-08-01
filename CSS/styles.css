@@ -201,6 +201,7 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
 }
 .NiniDesc {
     grid-area: Desc1;
+    text-align: left;
 }
 .MalkhazIcon {
     grid-area: Image4;
@@ -226,7 +227,11 @@ input {
 }
 
 textarea {
-    resize: none;
+    /* resize: none; */
+}
+
+.textarea_FontSize {
+    font-size: 3rem;
 }
 
 .Review_Forms_margins {
@@ -252,11 +257,19 @@ p.form_title_top-margin {
 }
 
 /* Fixing Yazbegi Form */
-.Dropdown_form_height {
-    height: auto;
-}
-.DropDown_select_height {
+.DropDown_select_height_font {
     height: 50px;
+    font-size: 3rem;
+}
+
+.Montage_form_height {
+    height: 300px;
+}
+
+.Select_Height {
+    height: 100px;
+    overflow: auto;
+    margin-bottom: 20px;
 }
 
 /* Fieldsets */
