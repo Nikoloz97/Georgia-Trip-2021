@@ -2,10 +2,22 @@
 /* Overall Stuff */
 * {
 font-size: 3rem;
+/* Google fonts (CSS rules to specify families section) */
+font-family: 'Montserrat', sans-serif;
 }
+
 
 p, h1, h2, h3, h4, ul, li {
     padding-left: 20px;
+}
+
+
+
+
+
+/* Can either use id to make this bullet-style take precedence, or follow up class with "! important" */
+#disc {
+    list-style-type: disc;
 }
 
 /* Establishing Root colors */
@@ -40,7 +52,7 @@ h1, h2, h3, h4 {
 table,
 td,
 th {
-    border: 1px solid black;
+    border: 1px solid lightgray;
     border-collapse: collapse;
     margin-left: 20px;
     padding:5px 60px;
@@ -122,21 +134,39 @@ figcaption {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 100px;
+    background-color: #F8F8F8;
+    border: 2px solid #E8E8E8;
+    border-radius: 3%;
 
 }
 
+.Yazbegi_expand:hover {
+    transform: scale(1.5,1.5);
+    /* These borders = not perfect? Even though image border-radius = 100px */
+    /* border: 5px solid lightgray; */
+    border-radius: 100px;
+    filter: blur(0px);
+}
 
-/* ----- */
+
 /* Flex shrink wouldn't work... Flex basis = overtakes width/height properties */
-/* ----- */
 .YazbegiImage {
     flex-basis: 500px;
     flex-shrink: 1;
     margin-bottom: 10px;
+    filter: blur(2px);
 }
 .Yaz_figcap {
     text-align: center;
 }
+
+/* Links  */
+
+a:hover[target="_blank"] {
+    border: 1px solid lightpink;
+}
+
+
 
 /* Creating a biography section using a grid */
 
@@ -155,7 +185,8 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
     align-items: center;
     row-gap: 10px;
     grid-template-areas: "HeaderIcon HeaderDesc" "Image1 Desc1" "Image2 Desc2" "Image3 Desc3" "Image4 Desc4";
-
+    background-color: #F8F8F8;
+    border: 2px solid #E8E8E8;
 }
 .PeopleHeaderIcon {
     grid-area: HeaderIcon;
@@ -184,7 +215,7 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
     height: 400px;
     width: 300px;
     margin: 20px;
-    border: 1px solid black;
+    border: 5px solid darkgray;
     border-radius: 50%;  
    
 }
@@ -193,6 +224,11 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
     width: 100%;
     border-radius: 50%;
 
+}
+
+/* Malkhaz image was taken horizontally, so object-fit = helps to prevent warping */
+.IconFit_ObjectFit {
+    object-fit: cover;
 }
 
 /* Shifting Items in a grid (refer to grid-template-areas property) */
@@ -270,6 +306,12 @@ p.form_title_top-margin {
     height: 100px;
     overflow: auto;
     margin-bottom: 20px;
+}
+
+/* File Forms */
+
+.file_font {
+    font-size: 3rem;
 }
 
 /* Fieldsets */
