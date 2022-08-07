@@ -7,11 +7,13 @@ font-family: 'Montserrat', sans-serif;
 }
 
 
-p, h1, h2, h3, h4, ul, li {
+p, h1, h2, h3, h4, ul, li, footer, aside {
     padding-left: 20px;
 }
 
-
+body {
+    background-color: #F8F8F8;
+}
 
 
 
@@ -28,7 +30,6 @@ p, h1, h2, h3, h4, ul, li {
     --color-accent: #2c2ced;
 }
 
-/*  */
 
 
 /* Headings */
@@ -46,6 +47,11 @@ h1, h2, h3, h4 {
 }
 .pMargins {
     margin-top: 100px;
+    padding-left: 0px !important;
+}
+
+.margin_bottom {
+    margin-bottom: 50px;
 }
 
 /* Tables */
@@ -134,8 +140,8 @@ figcaption {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 100px;
-    background-color: #F8F8F8;
-    border: 2px solid #E8E8E8;
+    background-color: #F5F5F5;
+    border: 6px solid white;
     border-radius: 3%;
 
 }
@@ -163,7 +169,11 @@ figcaption {
 /* Links  */
 
 a:hover[target="_blank"] {
-    border: 1px solid lightpink;
+    border: 1px solid #e6c300    ;
+}
+
+a:hover[class="no_hover"] {
+    border: none !important;
 }
 
 
@@ -319,7 +329,28 @@ p.form_title_top-margin {
     margin-top: 100px;
 }
 
-/* .... */
+/* Sprites 
+From toptal.com. Make sure to:
+1. Size is what you want (did this by using GIMP; it cannot be changed later).
+2. Add "display: inline-block" (not included in what it gives you)
+3. Add the file name to the path (../file-name/)*/
+
+.bg-ig_150px {
+    width: 150px; height: 150px;
+    background: url("../Icons/css_sprites.png") -10px -180px;
+    display: inline-block;
+}
+.bg-fb_150px {
+    width: 150px; height: 150px;
+    background: url('../Icons/css_sprites.png') -180px -10px;
+    display: inline-block;
+}
+.bg-gmail_150px {
+    width: 150px; height: 150px;
+    background: url('../Icons/css_sprites.png') -10px -10px;
+    display: inline-block;
+}
+
 
 
 /* Using Media Query (Display when split-screening). Standard breakpoint = 1024px (since laptops/desktops = greater than that)*/
