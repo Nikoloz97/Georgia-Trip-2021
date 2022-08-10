@@ -256,6 +256,43 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
     grid-area: Desc4;
 }
 
+/* Top Contact Grid (Gmail profile photo) */
+/* Using CSS clipping tool */
+
+.grid_contactphoto {
+    display: grid;
+    grid-template-columns: 300px 500px;
+    grid-template-rows: 300px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+
+.email_photo {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+/* active pseudo-class = functionality when clicking on object */
+.email_photo:active{
+    width: 500px;
+    height: 500px;
+    clip-path: none;
+}
+
+/* Bottom Contact Grid (Ig/Fb/gmail */
+
+.contact_grid {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 500px;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+
 /* Creating Forms.... */
 form, textarea {
     width: 50%;
