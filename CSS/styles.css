@@ -84,6 +84,7 @@ figcaption {
 }
 .ImagesGeneral {
     height: 500px;
+    width: 400px;
     border-radius: 100px;
 }
 .VideosGeneral {
@@ -94,8 +95,11 @@ figcaption {
 /* Floating Images (outdated) */
 
 .ImageMalkhaz {
-    border: 10px solid black;
+    border: 3px solid gray;
     float: left;
+    width: 600px;
+    border-radius: 100px;
+    margin-right: 20px;
 }
 .ImageMalkhazClearFloat {
     clear: both;
@@ -133,6 +137,7 @@ figcaption {
 /* Yazbegi photo montage)*/
 
 /* ... using Flex */
+/* Problem = last image (overlooking mountains = takes up more space than other divs) */
 
 .YazbegiContainer {
     width: 2000px;
@@ -396,7 +401,7 @@ From toptal.com. Make sure to:
         width: 100%;
     }
     .YazbegiContainer {
-        width: 1200px
+        width: 1400px
         }
     .YazbegiImage {
         flex-basis: 400px;

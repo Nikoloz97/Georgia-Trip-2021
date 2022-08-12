@@ -37,14 +37,18 @@
         Hello, I'm Nick Gotsy and I traveled to the country of Georgia in
         September of 2021. Here's a little snippet of what's to come:
       </p>
-
+      <!-- Left off here... -->
       <!-- Creating an image: img + tab  -->
       <figure>
-        <img
-          class="ImagesGeneral ImageMalkhaz"
-          src="/Images/IMG_5353.jpg"
-          alt="This is Malkhaz, Nini, and I somewhere in Javakheti."
-        />
+        <picture>
+          <source><source>
+          <source><source>
+          <img
+            class="ImageMalkhaz"
+            src="/Images/IMG_5353.jpg"
+            alt="This is Malkhaz, Nini, and I somewhere in Javakheti."
+          />
+        </picture>
           <figcaption >
             Malkhaz, Nini, and I somewhere in Javakheti. It around 72&deg outside
           </figcaption>
@@ -118,7 +122,20 @@
           <h2>Contact</h2>
           <p>You can contact me directly through my email <a href="mailto:nick.gotsy@gmail.com" target="_blank">here</a></p>
           <div class="grid_contactphoto">
-            <div class="email_photo grid_box_positioning"><img src="/Images/Tutoring Photo.jpg" alt="This is my gmail photo"></div>
+            <div class="email_photo grid_box_positioning">
+              <!-- Created Responsive breakpoints (responsivebreakpoints.com; optimization) -->
+              <img 
+              src="/Images/Tutoring Photo.jpg" 
+              alt="This is my gmail photo"
+              srcset="
+                  /Images/Tutoring Photo.jpg 512w,
+                  /Images/Tutoring Photo.jpg 920w,
+                  /Images/Tutoring Photo.jpg 1400w" 
+              sizes="(max-width: 500px) 100vw,
+                  (max-width: 700px) 50vw,
+                  33vw"
+                  >
+            </div>
             <div class="grid_box_positioning"><p>Here is my email profile</p></div>
           </div>
           <p>Better yet, subscribe to our mailing list down below!</p>
@@ -208,7 +225,10 @@
                 <figcaption class = "Yaz_figcap">Yazbegi church (from a corner)</figcaption>
               </figure>
               <figure>
-                <div class="YazbegiImage Yazbegi_expand"><img class = "ImagesGeneral" src="/Images/IMG_2407.jpg" alt=""></div>
+                <div class="YazbegiImage Yazbegi_expand"><img class="ImagesGeneral"
+                  src="/Images/IMG_2407.jpg" 
+                  alt=""
+                  ></div>
                 <figcaption class = "Yaz_figcap">Me in the front of the trail overlooking the town</figcaption>
               </figure>
           </figure>
