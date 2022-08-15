@@ -25,8 +25,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-
 <!--  -->
+
+<!-- Font awesome -->
+<script src="https://kit.fontawesome.com/28c2b29593.js" crossorigin="anonymous"></script>
+
     <title>Georgia | 2021</title>
   </head>
   <body>
@@ -123,8 +126,13 @@
           <p>You can contact me directly through my email <a href="mailto:nick.gotsy@gmail.com" target="_blank">here</a></p>
           <div class="grid_contactphoto">
             <div class="email_photo grid_box_positioning">
-              <!-- Created Responsive breakpoints (responsivebreakpoints.com; optimization) -->
-              <img 
+              <!-- Created Art direction (picture -> sources; optimization) -->
+              <picture>
+                <source media="(max-width: 1500px)" srcset="/Images/Tutoring_Cropped.png">
+                <source media="(min-width: 1501px)" srcset="/Images/Tutoring Photo.jpg">
+                <!-- Image element = always added at end (just in case file isn't displayed) -->
+                <!-- Here, also created Responsive breakpoints (responsivebreakpoints.com; optimization) -->
+                <img 
               src="/Images/Tutoring Photo.jpg" 
               alt="This is my gmail photo"
               srcset="
@@ -133,15 +141,16 @@
                   /Images/Tutoring Photo.jpg 1400w" 
               sizes="(max-width: 500px) 100vw,
                   (max-width: 700px) 50vw,
-                  33vw"
-                  >
+                  33vw">
+              </picture>
+              
             </div>
-            <div class="grid_box_positioning"><p>Here is my email profile</p></div>
+            <div><p>Here is my email profile</p></div>
           </div>
           <p>Better yet, subscribe to our mailing list down below!</p>
 
           <!-- Creating a contact form. For Formspree, 1 - form: method POST, 2 - input: name attribute -->
-          <form action="https://formspree.io/f/xnqwewvn" method="POST">
+          <form action="https://formspree.io/f/xnqwewvn" method="POST" class="input_font">
             <input type="email" placeholder="Put email here..." maxlength="100" name="Email">
             <input class="button-primary margin_button" type="submit" value="Send">
           </form>
@@ -155,12 +164,16 @@
           <h2>Preparing For The Trip</h2>
           <p>
             Main things I did to prepare was:
-            <ul id="disc">
-              <li>Brush up on my Georgian (the link to my
-                Georgian flashcards is
-                <a href="https://quizlet.com/607590573/georgian-flash-cards/" target="_blank">here</a>)</li>
-              <li>Packed up for a month-long stay</li>
-              <li>Strategized on what diet I would go on. I decided to go keto!</li>
+            <!-- Comment directly below = filling in bullet list -->
+            <!-- <ul id="disc"> -->
+            <!-- Below = custom bullet points (font-awesome) -->
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-arrow-right fa-beat-fade"></i></i></span>Brush up on my Georgian (the link to my
+                  Georgian flashcards is
+                  <a href="https://quizlet.com/607590573/georgian-flash-cards/" target="_blank">here</a>)</li>
+                  <!-- Added animation delay on the second bullet arrow (instructions on font-awesome) -->
+                <li><span class="fa-li"><i class="fa-solid fa-arrow-right fa-beat-fade" style="--fa-animation-delay: 250ms;"></i></i></span>Packed up for a month-long stay</li>
+                <li><span class="fa-li"><i class="fa-solid fa-arrow-right fa-beat-fade"></i></i></span>Strategized on what diet I would go on. I decided to go keto!</li>
             </ul>
           </p>
         <h2 id="JumpToStart" class="HeadingsMargin">Flight to Georgia</h2>
@@ -213,7 +226,7 @@
           <!-- Flexing Photos
           Tip when zen coding, putting slash (/) = creating another element "at the same level" - just try it-->
           <h3 class="HeadingsMargin">Yazbegi - Photo Montage</h3>
-          <p>Instructions: Hover over images to see a clearer image</p>
+          <p>Hover over images to see a clearer image</p>
           <figure>
             <div class="YazbegiContainer">
               <figure>
@@ -250,7 +263,7 @@
             </figure>
 
             <!-- ... creating a multiple-selecting drop-down list -->
-            <p class = "form_title_top-margin"> Which of these photos should go in my montage? (Can highlight multiple)</p>
+            <p class = "form_title_top-margin"> Which of these photos should go in my montage? (Click and drag for multiple)</p>
             <figure>
               <form action="https://formspree.io/f/mlevrbwy" method="POST" class="Montage_form_height">
                 <div class="Select_Height">
@@ -321,8 +334,8 @@
           <figure>
             <div class="Review_Forms_margins">
               <p class="form_title_top-margin">Where should I travel next?</p>
-              <form action="https://formspree.io/f/xpznarqa" method="POST">
-                <input name="Countries" type="text" list="countries" max="100">
+              <form class="input_font" action="https://formspree.io/f/xpznarqa" method="POST">
+                <input name="Countries" type="text" list="countries" max="100" >
                   <datalist id="countries">
                     <option>Russia</option>
                     <option>France</option>
@@ -341,7 +354,7 @@
           <!-- Creating a file input -->
           <figure>
             <p class="form_title_top-margin">Visited Georgia and want to share your images? Drop them down below!</p>
-            <form action="https://formspree.io/f/mjvzbrgo" method="POST" class="file_font">
+            <form action="https://formspree.io/f/mjvzbrgo" method="POST" class="input_font">
               <input multiple type="file" accept="image/*" max="5" name="file_input">
               <div><input class="button-primary margin_button" type="submit" value="Send"></div>
             </form>
@@ -349,7 +362,7 @@
 
           <figure>
             <p class="form_title_top-margin">Better yet, drop videos here!</p>
-            <form action="https://formspree.io/f/xaykwjqp" method="POST" class="file_font">
+            <form action="https://formspree.io/f/xaykwjqp" method="POST" class="input_font">
               <input name="video_input" type="file" accept="video/*" max="5">
               <div><input class="button-primary margin_button" type="submit" value="Send"></div>
             </form>
