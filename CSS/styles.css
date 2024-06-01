@@ -154,6 +154,10 @@ figcaption {
 
 }
 
+.Yazbegi_expand {
+    transition: all 0.5s;
+}
+
 .Yazbegi_expand:hover {
     transform: scale(1.5,1.5);
     /* These borders = not perfect? Even though image border-radius = 100px */
@@ -161,6 +165,7 @@ figcaption {
     border-radius: 100px;
     filter: blur(0px);
 }
+
 
 
 /* Flex shrink wouldn't work... Flex basis = overtakes width/height properties */
@@ -218,6 +223,7 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
     /* display: none */
 }
 
+
 .PeopleHeaderDesc {
     grid-area: HeaderDesc;
     width: auto;
@@ -235,13 +241,26 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
     margin: 20px;
     border: 5px solid darkgray;
     border-radius: 50%;  
+    transition: border-color 0.3s, box-shadow 0.3s, border-radius 0.5s;
    
 }
+
+.PersonIcon:hover {
+    border-color: darkgray;
+    box-shadow: 0px 0 0 15px rgba(208, 207, 208, 0.5);
+    border-radius: 0;
+    transition: border-radius 0.5s;
+}
+
 .IconFit {
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    transition: border-radius 0.5s;
+}
 
+.IconFit:hover {
+    border-radius: 0;
 }
 
 /* Malkhaz image was taken horizontally, so object-fit = helps to prevent warping */
@@ -304,7 +323,7 @@ Tip4: To see assigned names for grid, in devtools, after selecting "grid", under
 /* Creating Forms.... */
 form, textarea {
     width: 50%;
-    padding: 2rem;
+    padding: 3rem;
     font-size: 2rem;
 
 }
@@ -313,8 +332,16 @@ form, textarea {
     font-size: 2.5rem;
 }
 
-input {
-    padding: 5px;
+
+input:focus, textarea:focus, select:focus {
+    border-color: plum !important;
+    box-shadow: 0px 0 0 4px rgba(216, 160, 221, 0.5) !important;
+}
+
+
+input, textarea, select {
+    padding: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 textarea {
@@ -358,14 +385,19 @@ p.form_title_top-margin {
 }
 
 .Select_Height {
-    height: 100px;
+    height: 50px;
     overflow: auto;
     margin-bottom: 20px;
+    transition: height 0.5s;
+}
+
+.Select_Height:hover {
+    height: 200px;
 }
 
 /* File Forms */
 
-.file_font {
+.input_font {
     font-size: 3rem;
 }
 
